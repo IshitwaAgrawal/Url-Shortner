@@ -5,7 +5,7 @@ import UserProfile from '../components/UserProfile';
 
 const Sidebar = () => (
     <div className="sidebar">
-        <TitleBar />
+        <TitleBar sidebar />
         <CreatedUrls />
         <UserProfile />
     </div>

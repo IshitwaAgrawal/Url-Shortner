@@ -14,15 +14,6 @@ const App = () => (
                     Name
                     Logout
         */}
-        {/* 
-            Body 
-                Title Bar
-                    Welcome, Username
-                Main Body
-                    Search Bar
-                    Created Urls list
-
-        */}
         <Sidebar />
         <Body />
     </div>

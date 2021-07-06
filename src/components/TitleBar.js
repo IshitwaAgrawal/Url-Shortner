@@ -3,7 +3,7 @@ import React from 'react';
 const TitleBar = () =>{
     return (
         <div className="title">
-            URL-Shortner
+            <span>URL-Shortner</span>
         </div>
     );
 }
