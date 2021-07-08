@@ -1,21 +1,14 @@
 import React from 'react';
-import TitleBar from '../components/TitleBar';
-import MainBody from './MainBody';
+import AddUrl from '../components/AddUrl';
+import CreatedUrlsList from './CreatedUrlsList';
 
-const Body = () =>(
-    <div className="body">
-        {/* 
-            Body 
-                Title Bar
-                    Welcome, Username
-                Main Body
-                    Search Bar
-                    Created Urls list
-
-        */}
-        <TitleBar body />
-        <MainBody />
-    </div>
-);
+const Body = () =>{
+    return (
+        <div className="body">
+            <AddUrl />
+            <CreatedUrlsList />
+        </div>
+    );
+};
 
 export default Body;

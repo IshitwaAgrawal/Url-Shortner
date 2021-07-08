@@ -3,8 +3,7 @@ import React from 'react';
 const CreatedUrls = () =>{
     return (
         <div className="createdUrls">
-            <span className="createdUrls__name">Created Urls - </span>
-            <span className="createdUrls__number">80</span>
+            <h3>Created Urls : 08</h3>
         </div>
     );
 };

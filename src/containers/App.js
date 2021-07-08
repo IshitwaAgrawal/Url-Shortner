@@ -1,22 +1,10 @@
 import React from 'react';
-import Sidebar from '../containers/Sidebar';
-import Body from '../containers/Body';
+import Homepage from './Homepage';
 
-const App = () => (
-    <div className="main">
-        {/* 
-            Sidebar 
-                Title Bar
-                Body
-                    Created Urls
-                User Panel
-                    Avatar
-                    Name
-                    Logout
-        */}
-        <Sidebar />
-        <Body />
-    </div>
-);
+const App = () =>{
+    return (
+        <Homepage />
+    );
+};
 
 export default App;

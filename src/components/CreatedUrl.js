@@ -2,9 +2,7 @@ import React from 'react';
 
 const CreatedUrl = () =>{
     return (
-        <div className="createdUrl">
-
-        </div>
+        <div className="createdurl"></div>
     );
 };
 
