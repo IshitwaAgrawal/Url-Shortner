@@ -1,11 +1,20 @@
-body > #root > div {
+body,
+#root {
   margin: 0;
   padding: 0;
+  background-color: black;
+}
+body > #root > div {
   height: 97vh;
+  width: 98%;
   padding: 10px;
   margin: 0;
 }
 .homepage {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-areas:
     "a b b b b b b"
@@ -124,4 +133,36 @@ body > #root > div {
   flex: 0.8;
 }
 .createdurl {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: fit-content;
+  min-width: 40rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.createdurl__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.createdurl__info__shortUrl {
+  font-size: 24px;
+  color: #000000;
+}
+.createdurl__info__longUrl {
+  font-size: 20px;
+  color: #999999;
+  margin-top: 5px;
+}
+.createdurl__clicks {
+  background-color: #68cacf;
+  color: #f2f2f2;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 20px;
 }
