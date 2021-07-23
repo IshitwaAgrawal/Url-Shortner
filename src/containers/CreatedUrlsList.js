@@ -10,10 +10,6 @@ const CreatedUrlsList = () =>{
             <CreatedUrl />
             <CreatedUrl />
             <CreatedUrl />
-            <CreatedUrl />
-            <CreatedUrl />
-            <CreatedUrl />
-            <CreatedUrl />
         </div>
     );
 };
