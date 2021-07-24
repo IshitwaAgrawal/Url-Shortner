@@ -5,7 +5,7 @@ import Register from './Register';
 
 const App = () => {
     return (
-        <Register />
+        <Homepage />
     );
 };
 

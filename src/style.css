@@ -190,7 +190,11 @@ body > #root > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20rem;
+  width: 35rem;
+  padding: 30px;
+  background-color: #3e7e94;
+  /* border: 2px solid black; */
+  border-radius: 24px;
 }
 .register__main > h1 {
   color: #4396e2;
@@ -215,18 +219,20 @@ body > #root > div {
   height: 2.5rem;
   border: none;
   font-size: 1.2rem;
+  border-radius: 15px;
+  padding-left: 20px;
 }
 .inputelement__main > input:focus {
   outline: none;
 }
 .inputelement__main > h4 {
-  color: #707070;
+  color: #cbd9e6;
   font-size: 1.3rem;
   margin-left: -0.5rem;
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
+  color: rgb(14, 11, 11);
   opacity: 25%; /* Firefox */
 }
 
