@@ -1,11 +1,13 @@
 import React from 'react';
 import InputElement from '../components/InputElement';
 import Button from '../components/Button';
+import { NavLink } from 'react-router-dom';
+import * as routes from '../utils/routes';
 
 const Register = () => {
     return (
         <div className="register__main">
-            <h1>Welcome!</h1>
+            <span className="welcome__text">Welcome!</span>
             <h4>Register to continue</h4>
             <div className="register__main__box">
                 <InputElement heading="E-Mail" placeholder="Enter your email"/>
@@ -13,7 +15,10 @@ const Register = () => {
                 <InputElement heading="Last Name" placeholder="Enter your last name"/>
                 <InputElement heading="Username" placeholder="Enter your username"/>
                 <InputElement password heading="Password" placeholder="Enter your password"/>
-                <Button text="Register"/>
+                <div className="register__main__box__btn">
+                    <NavLink to={routes.login}><Button text="Login"/></NavLink>
+                    <Button text="Register"/>
+                </div>
             </div>
         </div>
     );
