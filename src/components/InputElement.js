@@ -1,12 +1,10 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 const InputElement = (props) =>{
     const type = props.password?"password":"text";
 
-    const [value,setValue] = useState("");
-
     const changeValue = (event) =>{
-        setValue(event.target.value);
+        props.setValue(event.target.value);
     }
     return (
         <div className="inputelement__main">
@@ -14,7 +12,7 @@ const InputElement = (props) =>{
             <input 
                 type={type} 
                 placeholder={props.placeholder}
-                value={value}
+                value={props.value}
                 onChange={changeValue}/>
         </div>
     );

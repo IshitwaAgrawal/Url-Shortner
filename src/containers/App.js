@@ -11,19 +11,11 @@ const App = () => {
     return (
         <div>
             <Switch>
-                <Route path={Routes.homepage}>
-                    <Homepage />
-                </Route>
-                <Route path={Routes.login}>
-                    <SignIn />
-                </Route>
-                <Route path={Routes.signup}>
-                    <Register />
-                </Route>
-                <Route path={Routes.forgot}>
-                    <ForgetPassword />
-                </Route>
-                <Route path={Routes.reset_password} component={NewPassword} />
+                <Route path={Routes.login} exact component={SignIn} />
+                <Route path={Routes.homepage} exact component={Homepage} />
+                <Route path={Routes.signup} exact component={Register} />
+                <Route path={Routes.forgot} component={ForgetPassword} exact />
+                <Route path={Routes.reset_password} component={NewPassword} exact />
             </Switch>
         </div>
     );
