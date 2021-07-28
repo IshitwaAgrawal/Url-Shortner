@@ -1,8 +1,8 @@
 import * as actions from './actions';
 const initialState = {
-    user:[],
-    urls:[],
-    jwt:"",
+    user:null,
+    urls:null,
+    jwt:null,
 };
 
 const appReducer = (state=initialState, action) =>{

@@ -2,11 +2,11 @@ import React from 'react';
 import AddUrl from '../components/AddUrl';
 import CreatedUrlsList from './CreatedUrlsList';
 
-const Body = () =>{
+const Body = ({urls,jwt,id}) =>{
     return (
         <div className="body">
-            <AddUrl />
-            <CreatedUrlsList />
+            <AddUrl id={id} jwt={jwt} />
+            <CreatedUrlsList urls={urls}/>
         </div>
     );
 };
