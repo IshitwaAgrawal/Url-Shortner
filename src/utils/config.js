@@ -1,2 +1,1 @@
-export const url = "http://localhost";
-export const port = 80;
+export const url = "https://url-shortner09.herokuapp.com";
