@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Homepage from "./Homepage";
 import SignIn from "./SignIn";
 import Register from "./Register";
@@ -6,8 +6,23 @@ import ForgetPassword from "./ForgetPassword";
 import NewPassword from "./NewPassword";
 import { Switch, Route } from "react-router-dom";
 import * as Routes from "../utils/routes";
+import * as endpoints from "../utils/endpoints";
+import * as actions from "../utils/actions";
+import axios from "../utils/axios";
+import { connect } from "react-redux";
 
-const App = () => {
+const App = ({ changeUserCount }) => {
+  useEffect(() => {
+    axios
+      .get(endpoints.userCount)
+      .then((res) => {
+        console.log(res);
+        changeUserCount(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
   return (
     <div>
       <Switch>
@@ -21,4 +36,9 @@ const App = () => {
   );
 };
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  changeUserCount: (count) =>
+    dispatch({ type: actions.change_users_count, payload: count }),
+});
+
+export default connect(null, mapDispatchToProps)(App);

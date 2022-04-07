@@ -3,6 +3,7 @@ const initialState = {
   user: null,
   urls: null,
   jwt: null,
+  users_count: 0,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -23,6 +24,12 @@ const appReducer = (state = initialState, action) => {
       return {
         ...state,
         jwt: action.payload,
+      };
+    }
+    case actions.change_users_count: {
+      return {
+        ...state,
+        users_count: action.payload,
       };
     }
 
