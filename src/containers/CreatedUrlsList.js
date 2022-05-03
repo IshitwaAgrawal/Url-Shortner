@@ -9,7 +9,7 @@ const CreatedUrlsList = ({ urls }) => {
           <CreatedUrl
             key={url?.id}
             id={url?.id}
-            short_url={url?.shortUrl}
+            short_url={url?.short_url}
             long_url={url?.long_url}
             clicks={url?.clicks}
           />
