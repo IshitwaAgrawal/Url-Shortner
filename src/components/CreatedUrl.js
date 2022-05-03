@@ -7,6 +7,7 @@ import * as config from "../utils/config";
 const CreatedUrl = ({ id, long_url, short_url, clicks, user, changeUrls }) => {
   const server_url = config.url + "/api1/url/";
   const websocket_url = "wss://url-shortner09.herokuapp.com/ws";
+  // const websocket_url = "wss://localhost:8000/ws";
   var sock = new WebSocket(websocket_url);
   let stompClient = Stomp.over(sock);
   const convert = (id) => {
