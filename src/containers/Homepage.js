@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import Body from "./Body";
 import { connect } from "react-redux";
 
-const Homepage = ({ user, urls, jwt }) => {
+const Homepage = ({ user, urls, jwt, history }) => {
   return (
     <div className="homepage">
       <AppTitle />
@@ -15,6 +15,7 @@ const Homepage = ({ user, urls, jwt }) => {
         lastname={user?.last_name}
         urls_count={user?.createdUrls}
         users_count={5}
+        history={history}
       />
       <Body id={user?.id} urls={urls} jwt={jwt} />
     </div>

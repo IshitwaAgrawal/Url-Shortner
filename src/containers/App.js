@@ -11,7 +11,7 @@ import * as actions from "../utils/actions";
 import axios from "../utils/axios";
 import { connect } from "react-redux";
 
-const App = ({ changeUserCount }) => {
+const App = ({ changeUserCount, history }) => {
   useEffect(() => {
     axios
       .get(endpoints.userCount)
@@ -27,7 +27,9 @@ const App = ({ changeUserCount }) => {
     <div>
       <Switch>
         <Route path={Routes.login} exact component={SignIn} />
-        <Route path={Routes.homepage} exact component={Homepage} />
+        <Route path={Routes.homepage} exact>
+          <Homepage history={history} />
+        </Route>
         <Route path={Routes.signup} exact component={Register} />
         <Route path={Routes.forgot} component={ForgetPassword} exact />
         <Route path={Routes.reset_password} component={NewPassword} exact />

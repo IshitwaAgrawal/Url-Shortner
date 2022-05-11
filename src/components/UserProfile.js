@@ -1,6 +1,11 @@
 import React from "react";
+import * as routes from "../utils/routes";
 
-const UserProfile = ({ firstname, lastname }) => {
+const UserProfile = ({ firstname, lastname, history }) => {
+  const logout = () => {
+    history.goBack();
+  };
+
   return (
     <div className="userProfile">
       <img
@@ -13,7 +18,9 @@ const UserProfile = ({ firstname, lastname }) => {
           {firstname + " "}
           {lastname}
         </h3>
-        <button className="userProfile__main__button">LOGOUT</button>
+        <button className="userProfile__main__button" onClick={logout}>
+          LOGOUT
+        </button>
       </div>
     </div>
   );
