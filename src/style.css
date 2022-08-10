@@ -190,7 +190,8 @@ body > #root > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 35rem;
+  width: 65%;
+  max-width: 30rem;
   padding: 30px;
   background-color: #3e7e94;
   /* border: 2px solid black; */
