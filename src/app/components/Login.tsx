@@ -9,7 +9,7 @@ const Login: FC<LoginProps> = ({ onLogin }) => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">Login</h2>
-      <form onSubmit={onLogin}>
+      <form>
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Email</label>
           <input
@@ -25,7 +25,8 @@ const Login: FC<LoginProps> = ({ onLogin }) => {
           />
         </div>
         <button
-          type="submit"
+          type="button"
+          onClick={onLogin}
           className="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition duration-300"
         >
           Login

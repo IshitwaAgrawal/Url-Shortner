@@ -1,12 +1,12 @@
-// pages/index.tsx
+// pages/Home.tsx
+import React from "react";
 import type { NextPage } from "next";
 import Hero from "../components/Hero";
-import AuthContainer from "../containers/AuthContainer";
 import Dashboard from "../containers/Dashboard";
-import { useAuth } from "../context/AuthContext";
+import AuthContainer from "./AuthContainer";
 
 const Home: NextPage = () => {
-  const { isLoggedIn } = useAuth();
+  const isLoggedIn = false;
 
   return isLoggedIn ? (
     <Dashboard />
